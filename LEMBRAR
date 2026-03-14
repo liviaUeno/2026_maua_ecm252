@@ -1,0 +1,8 @@
+para rodar: npm run dev
+para criar projeto react: npm create vite exercicio -- --template react
+    - apaga os .css
+    - apaga o import do main
+    - limpa o index.jsx
+    - limpa o app.jsx
+para instalar lib: npm i fontawesome-free
+                   npm i bootstrap
