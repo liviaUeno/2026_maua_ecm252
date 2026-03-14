@@ -3,16 +3,17 @@ import Cartao from "./Cartao"
 import Feedback from "./Feedback"
 
 export default () => {
-  const textoOk = "Já recebi"
+  const textoOK = "Já recebi"
   const textoNOK = "Não recebi"
-  const funcaoOk = () => alert("Agradecemos o feedback")
+  const funcaoOK = () => alert("Agradecemos o feedback")
   const funcaoNOK = () => alert("Que pena")
   const componenteFeedback = (
   <Feedback
-    funcaoOk={funcaoOk}
+    funcaoOk={funcaoOK}
     funcaoNOK={funcaoNOK}
-    textoOk={textoOk}
-    textoNOK={textoNOK}/>
+    textoOk={textoOK}
+    textoNOK={textoNOK}
+    />
   )
 
   return (
