@@ -1,6 +1,8 @@
 // rafce
 import React, { useState } from 'react'
-// hook do react (useState):
+// hook do react (useState - devolve duas coisas, uma var de estado e uma função que muda var de estado): 
+// const pessoa = ["Ana", 20]
+// const [nome, idade] = pessoa
 
 const App = () => {
   const [contador, setContador] = useState(0)
