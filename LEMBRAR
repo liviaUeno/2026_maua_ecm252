@@ -6,3 +6,6 @@ para criar projeto react: npm create vite exercicio -- --template react
     - limpa o app.jsx
 para instalar lib: npm i fontawesome-free
                    npm i bootstrap
+no main colocar imports: 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import "@fortawesome/fontawesome-free/css/all.min.css"
