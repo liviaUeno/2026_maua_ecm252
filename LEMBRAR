@@ -1,4 +1,6 @@
 para rodar: npm run dev
+
+front:
 para criar projeto react: npm create vite exercicio -- --template react
     - apaga os .css
     - apaga o import do main
@@ -9,3 +11,10 @@ para instalar lib: npm i fontawesome-free
 no main colocar imports: 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "@fortawesome/fontawesome-free/css/all.min.css"
+
+
+back:
+para criar o package.json: npm init -y
+para criar o package-lock.json: npm i express
+para add gitignore: cntrl + shift + p > add git ignore
+para conexao com sql: npm i mysql2
