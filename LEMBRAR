@@ -17,4 +17,4 @@ back:
 para criar o package.json: npm init -y
 para criar o package-lock.json: npm i express
 para add gitignore: cntrl + shift + p > add git ignore
-para conexao com sql: npm i mysql2
+para conexao com sql: npm i mysql2+
