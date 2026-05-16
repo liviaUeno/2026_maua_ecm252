@@ -42,13 +42,14 @@ app.delete('/tarefas', async (req, res) => {
     }
 })
 
-app.put('/tarefas', async (req, res) => {
+app.put('/tarefas/:id', async (req, res) => {
     try{
-        const {cod_tarefa, titulo, descricao} = req.body
-        const resultado = await conexao.query("UPDATE tb_tarefa SET titulo = ?, descricao = ? WHERE cod_tarefa = ?;", [titulo, descricao, cod_tarefa])
+        const { id } = req.params 
+        const { titulo, descricao} = req.body
+        const resultado = await conexao.query("UPDATE tb_tarefa SET titulo = ?, descricao = ? WHERE cod_tarefa = ?;", [titulo, descricao, id])
         console.log(`Tarefa atualizada com sucesso: ${resultado}`)
         res.status(200).json({
-            cod_tarefa: cod_tarefa,
+            cod_tarefa: id,
             titulo: titulo,
             descricao: descricao,
             mensagem: 'Tarefa atualizada com sucesso'
