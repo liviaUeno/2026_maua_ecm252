@@ -16,3 +16,20 @@ MySQLConnectionPool criarPool(AppConfig config) {
     allowPublicKeyRetrieval: true,
   );
 }
+
+Future<void> aguardarBanco(
+  MySQLConnectionPool pool, {
+  int tentativas = 30,
+  Duration intervalo = const Duration(seconds: 2),
+}) async {
+  // SELECT 1
+  for (var tentativa = 1; tentativa <= tentativas; tentativa++) {
+    try {
+      await pool.execute('SELECT 1');
+      return;
+    } catch (_) {
+      if (tentativa == tentativas) rethrow; // função termina igual return
+      await Future<void>.delayed(intervalo);
+    }
+  }
+}
